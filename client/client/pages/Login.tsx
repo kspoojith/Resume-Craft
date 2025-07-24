@@ -87,7 +87,7 @@ export default function Login() {
     try {
       console.log("Trying login with:", email, password);
       const res = await axios.post(
-        "https://resume-craft-cswr.onrender.com/api/auth/login",
+        "https://resume-craft-ecru.vercel.app/api/auth/login",
         { email, password },
         { withCredentials: true }
       );
