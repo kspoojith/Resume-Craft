@@ -26,7 +26,7 @@ export default function Analyzer() {
   // Fetch user's resumes
   useEffect(() => {
     axios
-      .get("https://resume-craft-cswr.onrender.com/api/resumes", { withCredentials: true })
+      .get("http://localhost:5000/api/resumes", { withCredentials: true })
       .then((res) => setResumes(res.data))
       .catch(() => setResumes([]));
   }, []);
@@ -38,7 +38,7 @@ export default function Analyzer() {
     setResult(null);
     try {
       const response = await axios.post(
-        "https://resume-craft-cswr.onrender.com/api/ai/analyze",
+        "http://localhost:5000/api/ai/analyze",
         { latexCode: selectedResume.latexCode, title: selectedResume.title },
         { withCredentials: true }
       );

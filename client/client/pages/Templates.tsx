@@ -26,7 +26,7 @@ export default function Templates() {
   const { template, texContent, clsContent } = location.state || {};
 
   useEffect(() => {
-    axios.get("https://resume-craft-cswr.onrender.com/api/templates").then((res) => {
+    axios.get("http://localhost:5000/api/templates").then((res) => {
       setTemplates(res.data);
       setShuffledTemplates(shuffleArray(res.data));
     });
@@ -64,7 +64,7 @@ export default function Templates() {
     // Only fetch if the path exists
     if (template.texFile) {
       try {
-        const texRes = await axios.get(`https://resume-craft-cswr.onrender.com/${template.texFile}`, { responseType: "text" });
+        const texRes = await axios.get(`http://localhost:5000/${template.texFile}`, { responseType: "text" });
         console.log(texRes.data);
         texContent = texRes.data;
       } catch (err) {
@@ -78,7 +78,7 @@ export default function Templates() {
 
     if (template.clsFile) {
       try {
-        const clsRes = await axios.get(`https://resume-craft-cswr.onrender.com/${template.clsFile}`, { responseType: "text" });
+        const clsRes = await axios.get(`http://localhost:5000/${template.clsFile}`, { responseType: "text" });
         console.log(clsRes);
         clsContent = clsRes.data;
       } catch (err) {
@@ -105,7 +105,7 @@ export default function Templates() {
     // Remove everything before 'templates/uploads'
     const match = previewImage.match(/templates[\\/]+uploads[\\/]+.+/);
     const relativePath = match ? match[0].replace(/\\/g, "/") : "";
-    return `https://resume-craft-cswr.onrender.com/${relativePath}`;
+    return `http://localhost:5000/${relativePath}`;
   }
 
   function shuffleArray<T>(array: T[]): T[] {

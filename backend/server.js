@@ -28,8 +28,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   origin: [
-    'http://localhost:8080', // for local dev
-    'https://resume-craft-ecru.vercel.app' // your Vercel frontend
+    'http://localhost:8080', 
+    'https://resume-craft-ecru.vercel.app' 
   ],
   credentials: true
 }));

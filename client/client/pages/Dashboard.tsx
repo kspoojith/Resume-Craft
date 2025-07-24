@@ -52,7 +52,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchResumes = async () => {
       try {
-        const response = await axios.get('https://resume-craft-cswr.onrender.com/api/resumes', {
+        const response = await axios.get('http://localhost:5000/api/resumes', {
           withCredentials: true  // This will include cookies
         });
         setResumes(response.data);
@@ -68,7 +68,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     const fetchNotifications = async () => {
-      const res = await axios.get('https://resume-craft-cswr.onrender.com/api/notifications', { withCredentials: true });
+      const res = await axios.get('http://localhost:5000/api/notifications', { withCredentials: true });
       setNotifications(res.data);
     };
     fetchNotifications();
@@ -124,7 +124,7 @@ export default function Dashboard() {
   const handleDownload = async (resume: Resume) => {
     try {
       await axios.post(
-        `https://resume-craft-cswr.onrender.com/api/resumes/${resume._id}/increment-download`,
+        `http://localhost:5000/api/resumes/${resume._id}/increment-download`,
         {},
         { withCredentials: true }
       );
@@ -139,7 +139,7 @@ export default function Dashboard() {
         },
         ...prev
       ]);
-      window.open(`https://resume-craft-cswr.onrender.com${resume.compilationData?.pdfUrl}`, '_blank');
+      window.open(`http://localhost:5000${resume.compilationData?.pdfUrl}`, '_blank');
       setResumes((prev) =>
         prev.map((r) =>
           r._id === resume._id
@@ -154,7 +154,7 @@ export default function Dashboard() {
 
   const handleNotificationsOpen = async () => {
     setNotificationsOpen(true);
-    await axios.post('https://resume-craft-cswr.onrender.com/api/notifications/mark-all-read', {}, { withCredentials: true });
+    await axios.post('http://localhost:5000/api/notifications/mark-all-read', {}, { withCredentials: true });
     // Optionally, update local state:
     setNotifications(notifications.map(n => ({ ...n, read: true })));
   };

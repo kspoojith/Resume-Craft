@@ -54,7 +54,7 @@ export default function Builder() {
     const loadResume = async () => {
       if (resumeId) {
         try {
-          const response = await axios.get(`https://resume-craft-cswr.onrender.com/api/resumes/${resumeId}`, {
+          const response = await axios.get(`http://localhost:5000/api/resumes/${resumeId}`, {
             withCredentials: true  // Add this line to include cookies
           });
           const resume = response.data;
@@ -65,7 +65,7 @@ export default function Builder() {
           
           // If there's compilation data, try to load the PDF
           if (resume.compilationData?.pdfUrl) {
-            setPdfUrl(`https://resume-craft-cswr.onrender.com${resume.compilationData.pdfUrl}`);
+            setPdfUrl(`http://localhost:5000${resume.compilationData.pdfUrl}`);
           }
         } catch (error) {
           console.error("Error loading resume:", error);
@@ -122,7 +122,7 @@ export default function Builder() {
           formData.append("files", new Blob([cls], { type: "text/plain" }), "resume.cls");
         }
 
-        await axios.post("https://resume-craft-cswr.onrender.com/api/latex/upload", formData);
+        await axios.post("http://localhost:5000/api/latex/upload", formData);
       }
 
       let filename = "resume.tex";
@@ -134,7 +134,7 @@ export default function Builder() {
       });
 
       const response = await axios.post(
-        "https://resume-craft-cswr.onrender.com/api/latex/compile",
+        "http://localhost:5000/api/latex/compile",
         {
           uuid,
           filename,
@@ -177,7 +177,7 @@ export default function Builder() {
 
       if (resumeId) {
         // Update existing resume
-        await axios.put(`https://resume-craft-cswr.onrender.com/api/resumes/${resumeId}`, {
+        await axios.put(`http://localhost:5000/api/resumes/${resumeId}`, {
           title: resumeTitle,
           latexCode: tex,
           clsCode: cls,
@@ -187,7 +187,7 @@ export default function Builder() {
         });
       } else {
         // Create new resume
-        await axios.post('https://resume-craft-cswr.onrender.com/api/resumes', {
+        await axios.post('http://localhost:5000/api/resumes', {
           title: resumeTitle,
           latexCode: tex,
           clsCode: cls,

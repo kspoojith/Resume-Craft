@@ -30,7 +30,7 @@ export default function Register() {
   try {
     const name=firstName + " " + lastName;
     const res = await axios.post(
-      "https://resume-craft-cswr.onrender.com/api/auth/register",
+      "http://localhost:5000/api/auth/register",
       { name, email, password },
       { withCredentials: true }
     );

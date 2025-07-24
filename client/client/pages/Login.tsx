@@ -57,7 +57,7 @@ export default function Login() {
       const decoded = jwtDecode<GoogleJwtPayload>(credentialResponse.credential);
 
       const res = await axios.post(
-        "https://resume-craft-cswr.onrender.com/api/auth/oauth",
+        "http://localhost:5000/api/auth/oauth",
         {
           provider: "google",
           providerId: decoded.sub,
