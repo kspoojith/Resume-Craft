@@ -1,0 +1,173 @@
+% !TeX program = xelatex
+\documentclass{resume}
+\title{Resume}
+\author{John Doe}
+\date{June 2024}
+\usepackage[a4paper, left=2em, right=2em, top=2.5em, bottom=0em]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{0cm}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage[none]{hyphenat}
+\usepackage{changepage}
+\usepackage{hyperref}
+
+\defaultfontfeatures{LetterSpace=2.5}
+
+\hypersetup{
+    unicode=true,
+    colorlinks=true,
+    urlcolor=black,
+}
+
+\setmainfont{ArialMT}[
+    Path=./fonts/,
+    Extension = .ttf,
+    UprightFont=*-Light,
+    BoldFont=*-Medium,
+    ItalicFont=*-Italic,
+    ItalicFeatures={
+        SmallCapsFont=*-Italic,
+    },
+    BoldFeatures={
+        SmallCapsFont=*-Medium,  
+    },
+    SmallCapsFont=*-Medium,
+    ]
+
+\begin{document}
+
+
+\begin{multicols}{3}
+    \headerSection{\badge{flashyGreen}{\Large {\textbf{Front-end Developer}}}}
+    \columnbreak
+    \headerSection{\xhrulefill{black}{0.6em}}
+    \columnbreak
+    \headerSection{\xhrulefill{black}{0.6em} }
+\end{multicols}
+
+\begin{multicols}{2}
+    \headerSection{\Huge \textbf{John \newline Doe}}
+    \cvParagraph{\href{tel:00000000000}{+00 000 000 000} \newline \href{mailto:xxxxx@xx.com}{xxxxx@xx.com} \newline \href{https://github.com/xxxxx}{github.com/xxxxxx1y}}
+
+    \columnbreak
+    \begin{spacing}{1.5}
+        Innovative and detail-oriented Front-end Developer with over 5 years of experience in building, optimizing, and maintaining responsive websites and web applications. Proficient in HTML, CSS, JavaScript, and modern frameworks like React and Vue. Demonstrated ability to lead teams and manage projects effectively, ensuring timely delivery and high-quality standards. Passionate about creating seamless user experiences and continuously learning new technologies to enhance development processes.
+    \end{spacing}
+\end{multicols}
+
+\vspace{1em}
+\setlength{\columnsep}{1cm}
+
+\cvSection{Experience}
+\begin{adjustwidth}{2em}{0em}
+
+\positionAndCompanyLine{Team Leader}{Company Name}{06/2022 - 06/2024}
+\project{Ecommerce platform}{internal; pre-production; maintenance}
+\begin{flushleft}{\badge{lavenderBlue}{Responsibilities}}\end{flushleft}
+\begin{itemize}
+    \item coding: 90\% development / 10\% maintenance
+    \item team management
+    \item responsibility for delivering the sprint goal
+    \item HR issues (evaluation and recruitment interviews, vacation approvals, etc.)
+    \item decomposing business requirements into technical tasks
+    \item increasing the competences of the team
+\end{itemize}
+\techStackList{Typescript, Next.js, NX, Redux-Toolkits, Styled-Components, Tailwind, Jest.}
+\vspace{0.5em}
+
+\positionAndCompanyLine{Front-end Developer}{Company Name}{05/2020 - 06/2022}
+\project{Ecommerce B2B}{pre-production and maintenance}
+\begin{flushleft}{\badge{lavenderBlue}{Responsibilities}}\end{flushleft}
+\begin{itemize}
+    \item coding: 60\% development / 40\% maintenance
+    \item decomposition of business requirements into technical tasks
+    \item buddy for junior developers
+    \item coordination of developers' work (epic scope)
+    \item production deploys
+\end{itemize}
+\techStackList{Typescript, React, Redux-Saga, Styled Components, Jest, Storybook.}
+\vspace{0.5em}
+
+\positionAndCompanyLine{Junior Front-end Developer}{Company Name}{07/2019 - 05/2020}
+\project{Ecommerce B2C}{maintenance}
+\begin{flushleft}{\badge{lavenderBlue}{Responsibilities}}\end{flushleft}
+\begin{itemize}
+    \item coding: 30\% development / 70\% maintenance
+\end{itemize}
+\techStackList{React, Redux-Thunk, LESS, server side rendering (Express.js)}
+\vspace{0.5em}
+
+\positionAndCompanyLine{Front-end Developer}{Company Name}{02/2019 - 07/2019}
+\project{Administration panel for educational service}{pre-production and maintenance}
+\begin{adjustwidth}{1em}{0em}
+\begin{flushleft}{\badge{lavenderBlue}{Responsibilities}}\end{flushleft}
+\begin{itemize}
+    \item coding: 80\% development / 20\% maintenance
+\end{itemize}
+\techStackList{Vue.js, Firebase, Vuetify.}
+\end{adjustwidth}
+\project{Real-time educational game/survey}{maintenance}
+\begin{adjustwidth}{1em}{0em}
+\begin{flushleft}{\badge{lavenderBlue}{Responsibilities}}\end{flushleft}
+\begin{itemize}
+    \item coding: 100\% maintenance
+\end{itemize}
+\techStackList{Backbone.js, Firebase.}
+\end{adjustwidth}
+\vspace{1em}
+
+\positionAndCompanyLine{Gap to learn programming}{freelance}{02/2018 - 02/2019}
+\techStackList{HTML/CSS, JavaScript, Wordpress, Angular.}
+\vspace{0.3em}
+
+\positionAndCompanyLine{Account Manager}{Company Name}{11/2015 - 02/2018}
+\begin{flushleft}{\badge{lavenderBlue}{Responsibilities}}\end{flushleft}
+\begin{itemize}
+    \item customer service
+    \item creative - conceptual work
+    \item project management
+    \item preparation of offers for potential clients
+    \item media production (print, video, web)
+\end{itemize}
+\techStackList{Microsoft Office, Google Analytics.}
+
+\end{adjustwidth}
+
+\vspace{1em}
+
+\cvSection{Education}
+\begin{adjustwidth}{2em}{0em}
+
+\positionAndCompanyLine{Certificate}{Bootcamp IT Academy}{06/2018}
+\begin{itemize}
+    \item 320 hours of workshop
+    \item Topics: HTML5/CSS3, JavaScript, Bootstrap, GIT, SCRUM, REST, JSON, AJAX, React
+\end{itemize}
+
+\positionAndCompanyLine{Master of Economics}{University of Chicago}{10/2015}
+
+\end{adjustwidth}
+\vspace{1em}
+
+\begin{multicols}{2}
+    \cvSection{Additional activity}
+    \positionAndCompanyLine{}{Dead Poets Society}{2012-2015}
+    \begin{itemize}
+        \item Organization of business trainings and conferences (business education for students)
+        \item Organization of Global Entrepreneurship Week in Chicago, editions 2012-2014
+        \item Team leader
+    \end{itemize}
+    \columnbreak
+     \cvSection{Languages}
+    \begin{adjustwidth}{1em}{0em}
+    Polish: Native language
+    \newline
+    English: Upper-Intermediate (B2)
+    \end{adjustwidth}
+\end{multicols}
+
+
+\end{document} ​

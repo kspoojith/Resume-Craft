@@ -1,0 +1,168 @@
+\documentclass[10pt,article]{article}
+\usepackage[letterpaper,margin=0.3in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{palatino}
+\usepackage{tabularx}
+\fontfamily{SansSerif}
+\selectfont
+
+\usepackage[T1]{fontenc}
+\usepackage
+%[ansinew]
+[utf8]
+{inputenc}
+
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.82}
+\textheight=9.75in
+\raggedbottom
+
+\setlength{\tabcolsep}{0in}
+\newcommand{\isep}{-2 pt}
+\newcommand{\lsep}{-0.5cm}
+\newcommand{\psep}{-0.6cm}
+\renewcommand{\labelitemii}{$\circ$}
+
+\pagestyle{empty}
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\small \colorbox{mygrey} { \begin{minipage}{0.99\textwidth}\centering{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[3]{
+\begin{tabular*}{6.62in}{l @{\extracolsep{\fill}} r}
+	\textsc{{\textbf{#1}}} & \rightline\textsc{\textit{[#2]}} \\
+\end{tabular*}\vspace{-8pt}}
+%-----------------------------------------------------------
+
+\begin{document}
+\begin{table}
+    
+    \begin{minipage}{0.9\linewidth}
+        %\centering
+        \setlength{\tabcolsep}{70pt}
+        \def\arraystretch{1.1}
+        \begin{tabular}{ll}
+            \textbf{\Large{Name}}  &  {Mob. +91 XXXXXXXXXX} \\
+            \textbf{M.S. Quantitative Economics} &    {xxxxxx@gmail.com} \\
+            {Indian Statistical Institute, Kolkata}  \\
+        \end{tabular}
+    \end{minipage}\hfill
+\end{table}
+
+\setlength{\tabcolsep}{32pt}
+\begin{table}
+\centering
+\begin{tabular}{lllll}
+\toprule
+\toprule
+\textbf{Course}    & \textbf{College/University}     & \textbf{Year}     & \textbf{CGPA/\%} \\ 
+\toprule
+M.S. Quantitative Economics  & Indian Statistical Institute  & 2021-23   & xx.x\\ 
+Undergrad  & College Name  &  20xx-xx & xx.x\\ 
+Intermediate/+2      & School Name & 20xx & xx.x  \\ 
+High School      & School Name & 20xx & X.xx   \\ 
+\bottomrule
+\bottomrule \\[-0.9cm]
+\end{tabular}
+\end{table}
+% \fi
+
+\noindent
+\resheading{\textbf{SCHOLASTIC ACHIEVEMENTS}}\\[-0.5cm]
+\begin{itemize}
+\setlength\itemsep{-0.45em}
+\item Secured \textbf{X rank} in xxxx  \hfill {[20XX]}
+\item Cleared XX  \hfill {[20xx]}
+\\[-0.6cm]
+\end{itemize}
+
+
+\noindent
+\resheading{\textbf{WORK EXPERIENCE}}\\[-0.45cm]
+\begin{itemize}
+\setlength\itemsep{-0.2em}
+\item \textbf{Role | company name}\hfill {[Jun’XX-Aug’XX]}
+\begin{itemize}[noitemsep,nolistsep]
+    \item xxxx xxxxxx
+ \item xxxx xxxxx
+ \end{itemize}
+\item \textbf{Role | Univ name}\hfill {[Jun’XX-Aug’XX]} 
+\begin{itemize}[noitemsep,nolistsep]
+    \item xxxx xxxxxx
+ \item xxxx xxxxx
+ \end{itemize}
+\end{itemize}
+
+
+
+\noindent
+\resheading{\textbf{SKILLS \& INTERESTS}}\\[-0.5cm]
+ \begin{itemize}
+  \item \textbf{Programming Languages}: Java, Python, STATA, R\\[-0.7cm]
+  \item \textbf{Tools \& Libraries}: Scipy, Matplotlib, Tensorflow  \textbf{\LaTeX} \\[-0.7cm]
+\item \textbf{Interests}: Data Analysis, Machine Learning\\[-0.5cm]
+  \end{itemize}
+
+
+\noindent
+\resheading{\textbf{PROJECTS} }\\[-0.5cm]
+\begin{itemize}
+\setlength\itemsep{-0.5em}
+
+\item \textbf{Project Heading | Instructor Name}\hfill {[Apr'22-Jun’22]} 
+\begin{itemize}[noitemsep,nolistsep]
+    \item Worked on xxx
+ \item xxx xxxx xxxxxxxxx xxxxxxxxxxxx xxx xxx xx
+ \end{itemize}
+ 
+\item \textbf{Project Heading | Instructor Name}\hfill {[Apr'22-Jun’22]} 
+\begin{itemize}[noitemsep,nolistsep]
+    \item Worked on xxx
+ \item xxx xxxx xxxxxxxxx xxxxxxxxxxxx xxx xxx xx
+ \end{itemize}
+
+\end{itemize}
+
+
+
+\noindent
+\resheading{\textbf{RELEVANT COURSES}}\\[-0.2cm]
+ % \textbf{Econometrics | Statistics | Mathematical Methods | Microeconomics | Macroeconomics}\hfill {[ISI-D]}\\[-0.1cm]\\
+\begin{itemize}[noitemsep,nolistsep]
+  \item \textbf{Econometrics | Statistics | Mathematical Methods | Microeconomics | Macroeconomics}\hfill {[ISI-D]}\\[-0.4cm]\\
+  \textbf{Game Theory} \\[-0.4cm]
+
+  \item \textbf{Econometrics | Statistics | Mathematical Methods | Microeconomics | Macroeconomics}\hfill {[Bachelors]}\\[-0.4cm]\\
+  \textbf{Game Theory} \\[-0.2cm]
+\end{itemize}
+
+\noindent
+\resheading{\textbf{POSITIONS OF RESPONSIBILITY} }\\[-0.5cm]
+\begin{itemize}
+\setlength\itemsep{-0.5em}
+
+\item \textbf{PoR | Institute/Club/Body}\hfill {[Apr'22-Jun’22]} 
+\begin{itemize}[noitemsep,nolistsep]
+    \item Responsible for on xxx
+ \item xxx xxxx xxxxxxxxx xxxxxxxxxxxx xxx xxx xx
+ \end{itemize}
+ 
+\item \textbf{PoR | Institute/Club/Body}\hfill {[Apr'22-Jun’22]} 
+\begin{itemize}[noitemsep,nolistsep]
+    \item Managed xxx
+ \item xxx xxxx xxxxxxxxx xxxxxxxxxxxx xxx xxx xx
+ \end{itemize}
+
+\end{itemize}
+\noindent
+\resheading{\textbf{EXTRACURRICULAR ACTIVITIES}}\\[-0.45cm]
+\begin{itemize}
+\setlength\itemsep{-0.4em}
+\item xxxx xxxxxx xxx xx
+\item xxxx xxx xxx
+\item xxxxx xxxxx xxxx xxxx 
+\end{itemize}
+\end{document}

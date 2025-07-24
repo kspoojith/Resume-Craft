@@ -1,0 +1,129 @@
+\documentclass{letter}
+\usepackage{wallpaper}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\geometry{
+  paperwidth=\dimexpr\textwidth+\marginparsep+\marginparwidth\relax,
+  paperheight=\dimexpr\textheight+\footskip\relax,
+  left=20pt,
+  right=20pt,
+  top=0pt,
+  bottom=0pt,
+  nohead,
+  nofoot,
+  nomarginpar
+}
+
+\ThisCenterWallPaper{1.5}{cvbg.png}
+
+\begin{document}
+
+\begin{minipage}[t]{0.40\textwidth}
+\setlength{\baselineskip}{1.5\baselineskip}
+\color{white}
+\vspace{1cm}
+{\large Personal info}
+
+\rule{\linewidth}{0.4pt}
+
+\faPhone \quad 0557369874
+
+
+\faEnvelope \quad \href{somelink.com}{xxxx@gmail.com}
+
+
+\faMapMarker \quad Place
+
+\rule{\linewidth}{0.4pt}
+
+{\large Links}
+
+\faCode \quad \href{google.com}{Portfolio}
+
+\faGithub \quad \href{github.com}{Github}
+
+\rule{\linewidth}{0.4pt}
+
+{\large Skills}
+
+\faCircleNotch \quad Python
+
+\faCircleNotch \quad SQL
+
+
+\rule{\linewidth}{0.4pt}
+
+{\large Languages}
+
+\faLanguage \quad Arabic
+
+\faLanguage \quad French
+
+\faLanguage \quad English
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.60\textwidth}
+\setlength{\baselineskip}{1.5\baselineskip}
+\vspace{0.8cm}
+{\huge John doe}
+
+{\large Title}
+
+\vspace{0.5cm}
+ 
+Short description
+
+\vspace{0.5cm}
+
+{\large Work Experience}
+\rule{\linewidth}{0.4pt}
+
+{\large \textbf{Example, Freelance}}
+
+{\small January 2018-Present}
+
+\begin{itemize}
+    \item Some stuff
+    \item Other stuff
+\end{itemize}
+
+{\large \textbf{Example 2, Freelance}}
+
+{\small January 2021-Present}
+
+\begin{itemize}
+    \item Other other stuff
+\end{itemize}
+
+
+{\large \textbf{Example 3, Contract}}
+
+{\small January 2023-June 2023}
+
+\begin{itemize}
+    \item Other other other stuff
+\end{itemize}
+
+{\large Education}
+\rule{\linewidth}{0.4pt}
+
+{\large \textbf{Grade, University (Bachelor)}}
+
+{\small September 2018-June 2021}
+
+{\large \textbf{Grade, University (Master)}}
+
+{\small September 2021-June 2023}
+
+
+\end{minipage}
+\end{document}

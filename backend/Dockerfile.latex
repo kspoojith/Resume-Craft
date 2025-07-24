@@ -1,0 +1,12 @@
+FROM debian:bullseye
+
+# Install texlive-full (includes latexmk and all common packages)
+RUN apt-get update && apt-get install -y \
+    texlive-full \
+    latexmk \
+    && apt-get clean
+
+WORKDIR /data
+
+# Default command when container runs
+CMD ["latexmk", "-pdf", "-interaction=nonstopmode", "resume.tex"]
