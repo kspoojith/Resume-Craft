@@ -14,7 +14,7 @@ const getPreviewImageUrl = (previewImage: string) => {
   if (!previewImage) return "";
   const match = previewImage.match(/templates[\\/]+uploads[\\/]+.+/);
   const relativePath = match ? match[0].replace(/\\/g, "/") : "";
-  return `http://localhost:5000/${relativePath}`;
+  return `https://resume-craft-cswr.onrender.com/${relativePath}`;
 };
 
 const adminEmail = "suryapoojith9805@gmail.com";
@@ -47,7 +47,7 @@ const AdminTemplates: React.FC = () => {
   const [templates, setTemplates] = useState<Template[]>([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/templates").then((res) => setTemplates(res.data));
+    axios.get("https://resume-craft-cswr.onrender.com/api/templates").then((res) => setTemplates(res.data));
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -83,7 +83,7 @@ const AdminTemplates: React.FC = () => {
   }
 
   try {
-    await axios.post("http://localhost:5000/api/templates/upload", data, {
+    await axios.post("https://resume-craft-cswr.onrender.com/api/templates/upload", data, {
       headers: {
         "Content-Type": "multipart/form-data",
         "x-user-email": user.email, // Required for ownership tagging
@@ -105,7 +105,7 @@ const AdminTemplates: React.FC = () => {
     setAssets(null);
 
     // Fetch updated templates
-    const updated = await axios.get("http://localhost:5000/api/templates");
+    const updated = await axios.get("https://resume-craft-cswr.onrender.com/api/templates");
     setTemplates(updated.data);
   } catch (err: any) {
     setMessage("Upload failed: " + (err.response?.data?.message || err.message));
