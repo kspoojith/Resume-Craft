@@ -169,3 +169,20 @@ For questions, suggestions, or support, please open an issue or contact the main
 ---
 
 **Happy Resume Building!**
+
+---
+
+## Environment Variables
+
+Copy `.env.example` to `.env` in both `backend` and `client` (if needed), and fill in your own values:
+
+```sh
+cp backend/.env.example backend/.env
+cp client/.env.example client/.env
+```
+
+You will need to provide your own API keys and secrets for:
+- MongoDB Atlas
+- JWT secret
+- Cohere API key (for AI features)
+- Google OAuth credentials (for Google login)
